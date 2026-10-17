@@ -1,0 +1,16 @@
+{
+  "source_notebook_sha256": "bb8b82b34a6527bb36a9d2a7392d9fe742122b7c88fd214dcc8bb1e5f518f66b",
+  "extraction": "Code cells parsed and unparsed to remove notebook-only comments/outputs; environment-install cells excluded. No training outcome changed.",
+  "skipped_cells": [
+    {
+      "cell": 3,
+      "reason": "Notebook environment installation/magic; use separately provisioned GPU environment"
+    },
+    {
+      "cell": 4,
+      "reason": "Notebook environment installation/magic; use separately provisioned GPU environment"
+    }
+  ],
+  "protocol": "Original5-step then80-step continuation on the same LoRA adapter, not independent experiments",
+  "execution_status": "Not executed on this CPU-only host"
+}

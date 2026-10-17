@@ -1,0 +1,10 @@
+# Provision a CUDA environment compatible with the original training stack.
+# This file lists components, not a validated lock for the current CPU host.
+unsloth
+vllm
+trl
+transformers
+datasets
+peft
+accelerate
+bitsandbytes

@@ -8,6 +8,15 @@ Structured-answer parsing, exact counting targets, correctness and format reward
 
 ![Implementation mechanism: Alphabetic word and target letter → Calculate exact occurrence count → Parse one answer tag → Score correctness and format separately → Return aligned batch rewards](assets/mechanism.svg)
 
+
+
+## Inspect the original GPU training path
+
+The complete original code-cell workflow is restored with source provenance and an explicit CUDA preflight. Its five-step then80-step phases continue the same adapter; they are not independent experiments.
+
+[Commands, artifacts and benchmark scope](BENCHMARKS.md) · [Versioned profiles](reproduction.json)
+
+
 ## Try a small example
 
 A small offline fixture exercises the public implementation. It demonstrates the behavior shown below; it does not replace the historical dataset, benchmark or production validation.
