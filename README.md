@@ -60,3 +60,7 @@ See [DATA.md](DATA.md) for input contracts and [VALIDATION.md](VALIDATION.md) fo
 The saved comparison contains only one counting example and one retained-fact prompt; it does not establish general reasoning or knowledge retention. The standalone rewards are newly refactored and have not been used to recertify the original training trace.
 
 No client deployment, commercial outcome, or new live-provider performance is inferred from the component tests.
+
+## Reuse
+
+The original contributions listed in [LICENSING.md](LICENSING.md) are available under [MIT](LICENSE). This scoped grant preserves upstream notices and separate dataset, simulator, notebook and checkpoint terms.
