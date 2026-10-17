@@ -1,18 +1,30 @@
 # LLM Counting Reward Design
 
-**Feras Elghandour** · Technical case study
-
 Make character-counting rewards deterministic, testable, and separate from claims about language-model generalization.
 
 ## Implementation
 
 Structured-answer parsing, exact counting targets, correctness and format rewards, and a completion-batch interface suitable for a training adapter.
 
-```mermaid
-flowchart LR
-    A[Validated inputs] --> B[Core implementation]
-    B --> C[Behavior and error checks]
-    C --> D[Inspectable outcome]
+![Implementation mechanism: Alphabetic word and target letter → Calculate exact occurrence count → Parse one answer tag → Score correctness and format separately → Return aligned batch rewards](assets/mechanism.svg)
+
+## Try a small example
+
+A small offline fixture exercises the public implementation. It demonstrates the behavior shown below; it does not replace the historical dataset, benchmark or production validation.
+
+After the local setup below, run from the repository root:
+
+```sh
+python examples/quickstart.py
+```
+
+The [example source](examples/quickstart.py), [captured output](examples/expected-output.txt) and [execution record](examples/environment.json) keep this demonstration inspectable. Floating-point values may vary with library versions.
+
+Observed output from this run:
+
+```text
+{'expected': 3, 'parsed_answer': 3, 'correctness_reward': 2.0, 'format_reward': 1.0}
+[3.0]
 ```
 
 ## Evidence and results
@@ -32,7 +44,7 @@ python -m pip install -r requirements.txt
 python smoke_test.py
 ```
 
-See [DATA.md](DATA.md) for input contracts and [VALIDATION.md](VALIDATION.md) for the verification scope. The modules expose small APIs that can be integrated into a larger workflow.
+See [DATA.md](DATA.md) for input contracts and [VALIDATION.md](VALIDATION.md) for the verification scope. 
 
 ## Practical relevance and limitations
 
